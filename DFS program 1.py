@@ -1,17 +1,6 @@
-graph = {
-    'A': ['B', 'C'],
-    'B': ['D', 'E'],
-    'C': ['E', 'F', 'G'],
-    'D': [],
-    'E': [],
-    'F': [],
-    'G': []
-}
-visited = []
-def dfs(node):
-   if node not in visited:
-      visited.append(node)
-      for x in graph[node]:
-        dfs(x)
-dfs('A')
-print("DFS Traversal:", visited)
+DFS(Graph, Node)
+1. If Node is not visited:
+      a. Add Node to visited list.
+      b. For each neighbor in Graph[Node]:
+             Call DFS(Graph, neighbor).
+2. Stop.
