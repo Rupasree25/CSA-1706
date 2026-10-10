@@ -1,18 +1,12 @@
-from collections import deque
-graph = {
-    1: [2, 3],
-    2: [3, 4, 5],
-    3: [5],
-    4: [5],
-    5: []
-}
-visited = set()
-queue = deque([1])
-while queue:
-    node = queue.popleft()
-    if node not in visited:
-        print(node, end=" ")
-        visited.add(node)
-        for neighbor in graph[node]:
-            if neighbor not in visited:
-                queue.append(neighbor)
+BFS(Graph, Start)
+1. Create an empty visited set.
+2. Create a queue and insert Start node.
+3. While the queue is not empty:
+      a. Remove the first node from the queue.
+      b. If the node is not visited:
+            i. Print the node.
+            ii. Add the node to visited.
+            iii. For each neighbor of the node:
+                    If neighbor is not visited:
+                        Add neighbor to queue.
+4. Stop.
